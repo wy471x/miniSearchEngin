@@ -1,5 +1,7 @@
 ip 192.168.4.184
 port 8888
+threadnum 4
+queuesize 10
 xml /home/dunk/miniSearchEngin/data/XML 
 stop_words_en /home/dunk/miniSearchEngin/data/STOPWORDS/stop_words_eng.txt
 stop_words_cn /home/dunk/miniSearchEngin/data/STOPWORDS/stop_words_zh.txt
@@ -7,3 +9,4 @@ ripepage.lib /home/dunk//miniSearchEngin/data/WEBPAGE/ripepage.lib
 offset.lib /home/dunk//miniSearchEngin/data/WEBPAGE/offset.lib
 newripepage.lib /home/dunk/miniSearchEngin/data/WEBPAGE/newripepage.lib
 newoffset.lib /home/dunk/miniSearchEngin/data/WEBPAGE/newoffset.lib
+invertindextable /home/dunk/miniSearchEngin/data/WEBPAGE/invertIndextable

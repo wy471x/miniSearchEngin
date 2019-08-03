@@ -5,8 +5,8 @@ void test(){
     Configuration conf("/home/dunk/miniSearchEngin/conf/conf");
     PageLibPreprocessor pageprocessor(conf);
     pageprocessor.doProcess();
-    pageprocessor.shownewDoc();
-    pageprocessor.shownewOffset();
+    //pageprocessor.shownewDoc();
+    //pageprocessor.shownewOffset();
 }
 int main()
 {

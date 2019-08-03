@@ -2,6 +2,7 @@
 #include"Configuration.h"
 #include"WordSegmentation.h"
 #include"WebPage.h"
+#include<cmath>
 #include<iostream>
 #include<vector>
 #include<unordered_map>

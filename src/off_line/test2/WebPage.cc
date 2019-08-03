@@ -29,13 +29,17 @@ WebPage::WebPage(string& doc,Configuration& conf,WordSegmentation& jieba){
     wstr = regex_replace(wstr,label,L" ");
     str = jieba.cut(ws2S(wstr));
     for(auto& i : str){
-        _wordsmap[i]++;
+       if( i != " " ){ 
+          _wordsmap[i]++;
+       }
     }
     wstr = s2Ws(_doccontent);
     wstr = regex_replace(wstr,label,L" ");
     str = jieba.cut(ws2S(wstr));
     for(auto& i: str){
-        _wordsmap[i]++;
+       if(i != " "){ 
+          _wordsmap[i]++;
+       }
     }
     calcTopK(_topWords,TOPK_NUMBER,stopwordlist);
 }
