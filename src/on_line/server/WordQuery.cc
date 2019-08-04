@@ -8,6 +8,13 @@ struct SimilarityCompare{
 };
 string WordQuery::doQuery(const string& str){
     loadLibrary();
+    RedisTool redis;
+    string redisstr = redis.getString(str);
+    //查找缓存中是否含有关键字的缓存信息,有则返回给客户端，无则查询网页库
+    if(!redisstr.empty()){
+        cout<<"key has existed in redis."<<endl;
+        return redisstr;
+    }
     vector<string> querywords;
     if(str.size() > 0){
        querywords = _jieba.cut(str);
@@ -81,8 +88,8 @@ string WordQuery::doQuery(const string& str){
 //        for(auto i : resdocid){
 //            cout<<i<<endl;
 //        } 
-        
-        
+        //往redis中添加缓存信息
+        redis.setString(str,createJson(resdocid,querywords));
         return createJson(resdocid,querywords);  
     }else{
         return returnNoAnswer();

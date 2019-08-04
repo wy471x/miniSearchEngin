@@ -11,7 +11,7 @@ CXXFLAGS:= -w -g  $(addprefix -I, $(INC_DIR)) $(LIBS)
 EXE:=./server.exe
 
 $(EXE):$(OBJS)
-	$(CXX) -o $(EXE) $(OBJS) $(CXXFLAGS) /usr/local/lib/libjson.a
+	$(CXX) -o $(EXE) $(OBJS) $(CXXFLAGS) /usr/local/lib/libjson.a /usr/lib/hiredis/libhiredis.so
 
 clean:
 	rm -rf $(EXE)

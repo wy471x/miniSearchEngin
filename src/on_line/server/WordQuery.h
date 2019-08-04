@@ -1,4 +1,5 @@
 #pragma once
+#include "RedisTool.h"
 #include "Configuration.h"
 #include "WebPage.h"
 #include "WordSegmentation.h"

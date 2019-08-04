@@ -26,7 +26,7 @@ void PageLib::create(){
                 title.append(childtitle->GetText());
            }
            if(childlink&&childlink->GetText()){
-           link.append(childlink->GetText());
+                link.append(childlink->GetText());
            }
            if(childdescription&&childdescription->GetText()){
                  description.append(childdescription->GetText());
